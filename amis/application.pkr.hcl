@@ -39,7 +39,8 @@ build {
       "sudo apt update && sudo apt upgrade -y",
       "sudo apt install -y nginx",
       "sudo systemctl enable nginx",
-      "sudo systemctl start nginx"
+      "sudo systemctl start nginx",
+      "sudo snap install amazon-ssm-agent --classic"
     ]
   }
 }

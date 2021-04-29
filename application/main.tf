@@ -15,6 +15,7 @@ resource "aws_launch_template" "app" {
   image_id               = var.image_id
   instance_type          = var.instance_type
   vpc_security_group_ids = data.aws_security_groups.app.ids
+  key_name               = "bastion"
 }
 
 resource "aws_autoscaling_group" "app" {
