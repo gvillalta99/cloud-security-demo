@@ -16,11 +16,15 @@ variable "cidr_block" {
 }
 variable "cidr_public_subnets" {
   type    = list(string)
-  default = ["172.16.0.0/26", "172.16.0.64/26"]
+  default = ["172.16.0.0/28", "172.16.0.16/28"]
 }
-variable "cidr_private_subnets" {
+variable "cidr_private_app_subnets" {
   type    = list(string)
-  default = ["172.16.0.128/26", "172.16.0.192/26"]
+  default = ["172.16.0.32/28", "172.16.0.48/28"]
+}
+variable "cidr_private_db_subnets" {
+  type    = list(string)
+  default = ["172.16.0.64/28", "172.16.0.80/28"]
 }
 variable "newbits" {
   type    = number
