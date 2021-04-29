@@ -35,7 +35,6 @@ resource "aws_lb" "default" {
   load_balancer_type = "application"
   security_groups    = data.aws_security_groups.lb.ids
   subnets            = var.subnet_public_ids
-  tags               = var.tags
 }
 
 resource "aws_lb_target_group" "app" {

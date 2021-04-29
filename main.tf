@@ -12,7 +12,7 @@ locals {
   region = "us-east-1"
   azs    = ["us-east-1a", "us-east-1c"]
   tags = {
-    Curso      = "MBA - CYBERSECURITY"
+    Curso      = "MBA-CYBERSECURITY"
     Disciplina = "CLOUD COMPUTING SECURITY, DEVOPS E DEVSECOPS "
     Turma      = "55SEG"
   }
