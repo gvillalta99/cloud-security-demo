@@ -17,3 +17,11 @@ aplicação.
 O diagrama de arquitetura do projeto na AWS ficou da seguinte maneira:
 
 ![Diagrama da arquitetura do projeto](docs/arquitetura.png)
+
+Estamos seguindo seguindo uma [arquitetura de três
+camadas](https://en.wikipedia.org/wiki/Multitier_architecture#Three-tier_architecture),
+segregando com subnets as três camadas. Nas subnets públicas, fica apenas o
+balanceador de carga (Load balancer, LB). Na subnet privada de aplicação, ficam
+apenas as instâncias da nossa aplicação. Na subnet privada de bancos de dados,
+ficam apenas as instâncias de banco de dados.
+
