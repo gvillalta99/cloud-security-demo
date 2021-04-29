@@ -36,8 +36,8 @@ build {
 
   provisioner "shell" {
     inline = [
-      "sudo apt update && sudo apt upgrade",
-      "sudo apt install nginx",
+      "sudo apt update && sudo apt upgrade -y",
+      "sudo apt install -y nginx",
       "sudo systemctl enable nginx",
       "sudo systemctl start nginx"
     ]
