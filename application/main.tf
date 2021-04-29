@@ -17,7 +17,6 @@ resource "aws_launch_template" "app" {
 }
 
 resource "aws_autoscaling_group" "app" {
-  availability_zones  = var.availability_zones
   desired_capacity    = var.capacity.desired
   max_size            = var.capacity.max
   min_size            = var.capacity.min
