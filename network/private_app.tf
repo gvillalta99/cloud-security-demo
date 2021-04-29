@@ -5,8 +5,8 @@ resource "aws_subnet" "private_app" {
   availability_zone = var.availability_zones[count.index % local.azs_count]
 
   tags = merge({
-    Name = "private_app-${count.index}"
-    Tier = "Private_App"
+    Name = "private_app_${count.index}"
+    Tier = "Private"
   }, var.tags)
 }
 resource "aws_route_table" "private_app" {

@@ -6,7 +6,7 @@ resource "aws_subnet" "public" {
   map_public_ip_on_launch = true
 
   tags = merge({
-    Name = "public-${count.index}",
+    Name = "public_${count.index}",
     Tier = "Public"
   }, var.tags)
 }
