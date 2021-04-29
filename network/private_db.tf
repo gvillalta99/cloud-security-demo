@@ -16,7 +16,7 @@ resource "aws_route_table" "private_db" {
     Name = "private_db"
   }, var.tags)
 }
-resource "aws_route" "nat" {
+resource "aws_route" "private_db_nat" {
   route_table_id         = aws_route_table.private_db.id
   nat_gateway_id         = aws_nat_gateway.main.id
   destination_cidr_block = "0.0.0.0/0"
