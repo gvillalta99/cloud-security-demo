@@ -26,13 +26,13 @@ source "amazon-ebs" "example" {
     owners      = ["099720109477"]
   }
   ssh_username = "ubuntu"
-  vpc_id = "vpc-0c624f45c5295701c"
-  subnet_id = "subnet-037a9d4ff182ec8be"
+  vpc_id = "vpc-024355d233b18129b"
+  subnet_id = "subnet-062c74f1ea3383d95"
 }
 
 # a build block invokes sources and runs provisioning steps on them.
 build {
-  sources = ["source.amazon-ebs.firstrun"]
+  sources = ["source.amazon-ebs.example"]
 
   provisioner "shell" {
     inline = [
