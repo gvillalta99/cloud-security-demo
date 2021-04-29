@@ -38,9 +38,12 @@ module "application" {
   name          = "example-app"
   image_id      = "ami-07d8fdf67385ad60e"
   instance_type = "t2.micro"
+  subnet_ids    = module.network.private_app_subnet_ids
   capacity = {
     max     = 2
     min     = 1
     desired = 1
   }
+
+
 }

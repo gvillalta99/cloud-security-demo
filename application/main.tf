@@ -17,10 +17,11 @@ resource "aws_launch_template" "app" {
 }
 
 resource "aws_autoscaling_group" "app" {
-  availability_zones = var.availability_zones
-  desired_capacity   = var.capacity.desired
-  max_size           = var.capacity.max
-  min_size           = var.capacity.min
+  availability_zones  = var.availability_zones
+  desired_capacity    = var.capacity.desired
+  max_size            = var.capacity.max
+  min_size            = var.capacity.min
+  vpc_zone_identifier = var.subnet_ids
 
   launch_template {
     id      = aws_launch_template.app.id
