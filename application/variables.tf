@@ -5,4 +5,6 @@ variable "name" {}
 variable "image_id" {}
 variable "instance_type" {}
 variable "capacity" {}
-variable "subnet_ids" {}
+variable "subnet_app_ids" {}
+variable "subnet_public_ids" {}
+variable "vpc_id" {}

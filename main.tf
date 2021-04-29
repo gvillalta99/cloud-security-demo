@@ -35,15 +35,16 @@ module "application" {
   availability_zones = local.azs
   tags               = local.tags
 
-  name          = "example-app"
-  image_id      = "ami-07d8fdf67385ad60e"
-  instance_type = "t2.micro"
-  subnet_ids    = module.network.private_app_subnet_ids
+  name              = "example-app"
+  image_id          = "ami-07d8fdf67385ad60e"
+  instance_type     = "t2.micro"
+  subnet_app_ids    = module.network.private_app_subnet_ids
+  subnet_public_ids = module.network.public_subnet_ids
+  vpc_id            = module.network.vpc_id
+
   capacity = {
     max     = 2
     min     = 1
     desired = 1
   }
-
-
 }
