@@ -48,3 +48,13 @@ de infraestrutura como código (IaC), e vamos executá-lo de duas formas, locame
 com o programa de linha de comando `terraform` e pelo [Terraform
 Cloud](https://www.terraform.io/cloud) da Hashicorp (empresa por trás do
 terraform). Escolhemos essas maneiras por simplicidade de instalação e de configuração e praticidade de utilização.
+
+Por conta da facilidade de criar um ambiente com múltiplas contas na AWS,
+utilizando o AWS Organizations, nós optamos por usá-lo, ao invés de criar a
+infraestrutura na conta pessoal de algum dos membros do grupo. Dessa forma é
+trivial apagar a conta e com isso não ter que se preocupar com a cobrança por
+conta de algum recurso esquecido. Além da facilidade de integração de cobrança
+das contas filhas com a conta pai, como no exemplo abaixo:
+
+![Integração da cobrança entre conta filha e pai](docs/consolidated-billing.png)
+
