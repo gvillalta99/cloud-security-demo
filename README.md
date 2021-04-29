@@ -11,3 +11,9 @@ segurança desse provedor, como AWS IAM (Identity and Access Management), AWS WA
 
 Além disso, criaremos alguns outros elementos da AWS para podermos usar nossa
 aplicação.
+
+## Arquitetura
+
+O diagrama de arquitetura do projeto na AWS ficou da seguinte maneira:
+
+![Diagrama da arquitetura do projeto](docs/arquitetura.png)
