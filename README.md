@@ -25,3 +25,26 @@ balanceador de carga (Load balancer, LB). Na subnet privada de aplicação, fica
 apenas as instâncias da nossa aplicação. Na subnet privada de bancos de dados,
 ficam apenas as instâncias de banco de dados.
 
+Vamos utilizar o AWS WAF com algumas regras pré-configuradas pela AWS para
+proteger o tráfego de dados para a nossa aplicação. Além disso, vamos habilitar
+os logs de VPC Flow para a nossa VPC. Isso garante que todos todos os registros
+de tráfego da camada 4 serão armazenados e, posteriormente, podem ser utilizados
+pela outra ferramenta de segurança da AWS que iremos utiliziar, o GuardDuty.
+
+Além desses componentes de redes, vamos também habilitar o AWS CloudTrails, que
+gera logs de atividas na conta da AWS e os armazena para posteriormente serem
+utilizados pelo GuardDuty.
+
+
+## Metodologia
+
+Faremos tudo isso utilizando ferramentas de infraestrutura como código, que
+facilitam o gerenciamento dos recursos na nuvem e nos perminetem tratar a
+infraestrutura de uma maneira mais uniforme, integrada ao fluxo de trabalho
+comum aos programadores.
+
+Para isso escolhemos o [terraform](https://www.terraform.io/) como ferramenta
+de infraestrutura como código (IaC), e vamos executá-lo de duas formas, locamente
+com o programa de linha de comando `terraform` e pelo [Terraform
+Cloud](https://www.terraform.io/cloud) da Hashicorp (empresa por trás do
+terraform). Escolhemos essas maneiras por simplicidade de instalação e de configuração e praticidade de utilização.
